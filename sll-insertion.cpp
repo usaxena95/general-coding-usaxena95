@@ -13,7 +13,6 @@ void insertAtBegin(int value) {
     newNode->next = NULL;
     head = newNode;
   }
-
   else {
     newNode->next = head;
     head = newNode;
@@ -36,12 +35,8 @@ void insertAtEnd(int value) {
   printf("\nOne node inserted!!!\n");
 }
 
-void insertBetween(int value, int loc)
-
-{
-
+void insertBetween(int value, int loc){
   Node *prev_ptr, *cur_ptr;
-
   Node *newNode = new Node();
   newNode->data = value;
   cur_ptr = head;
@@ -64,9 +59,7 @@ int main() {
   cin >> n;
   head = NULL;
   Node *temp;
-
   while (n--) {
-
     Node *new_node = new Node();
     cin >> new_node->data;
     new_node->next = NULL;
@@ -79,17 +72,14 @@ int main() {
   }
   int value;
   cin >> value;
-
   // insertAtBegin(40000);
   // insertBetween(value,4);
   insertAtEnd(value);
-
   Node *p = head;
   while (p != NULL) {
     cout << (*p).data << " ";
     p = p->next;
   }
   cout << "\n";
-
   return 0;
 }
