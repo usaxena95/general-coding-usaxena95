@@ -12,8 +12,7 @@ void insertAtBegin(int value) {
   if (head == NULL) {
     newNode->next = NULL;
     head = newNode;
-  }
-  else {
+  } else {
     newNode->next = head;
     head = newNode;
   }
@@ -35,7 +34,7 @@ void insertAtEnd(int value) {
   printf("\nOne node inserted!!!\n");
 }
 
-void insertBetween(int value, int loc){
+void insertBetween(int value, int loc) {
   Node *prev_ptr, *cur_ptr;
   Node *newNode = new Node();
   newNode->data = value;
