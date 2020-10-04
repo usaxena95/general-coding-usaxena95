@@ -20,7 +20,11 @@ void printArray(int arr[], int n) {
 }
 
 int main() {
-  int price[] = {10, 4, 5, 90, 120, 80};
+  int num;
+  cin >> num;
+  int price[num];
+  for (int i = 0; i < num; i++)
+    cin >> price[i];
   int n = sizeof(price) / sizeof(price[0]);
   int S[n];
   calculateSpan(price, n, S);
